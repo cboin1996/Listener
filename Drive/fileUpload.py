@@ -7,14 +7,15 @@ import os
 import sys
 import json
 import logging
+# logging setup
 pathToFolder = '/home/christianboin/Programming/Python/Listener'
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s %(name)s %(levelname)-8s %(message)s',
-                    datefmt='%a, %d %b %Y %H:%M:%S',
-                    filename=os.path.join(pathToFolder, 'infoWatch.log'),
-                    filemode='w')
 logger = logging.getLogger('fileUpload')
-
+logger.setLevel(logging.DEBUG)
+formatter = logging.Formatter(fmt='%(asctime)s %(name)s  %(levelname)-8s %(message)s',datefmt="%Y-%m-%d - %H:%M:%S")
+fh = logging.FileHandler(os.path.join(pathToFolder, 'infoWatch.log'))
+fh.setLevel(logging.DEBUG)
+fh.setFormatter(formatter)
+logger.addHandler(fh)
 class Drive:
     pathTogSettings = os.path.join(os.path.dirname(os.path.realpath(__file__)),'gSettings.json')
     def __init__(self, fileName, fullPathForFileToUpload):

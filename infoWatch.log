@@ -1,86 +1,27 @@
-Sat, 20 Jul 2019 20:12:23 watch INFO     watching folder /home/christianboin/Programming/Python/WebTools/JukeBox/dump
-Sat, 20 Jul 2019 20:14:14 watch INFO     Added: ['The Tragically Hip - Bobcaygeon (Official Video).mp3']
-Sat, 20 Jul 2019 20:14:14 watch INFO     Size of file is: 
-Sat, 20 Jul 2019 20:14:16 watch INFO     2895872 Bytes
-Sat, 20 Jul 2019 20:14:18 watch INFO     5038080 Bytes
-Sat, 20 Jul 2019 20:14:20 watch INFO     7027493 Bytes
-Sat, 20 Jul 2019 20:14:22 watch INFO     File download is complete at /home/christianboin/Programming/Python/WebTools/JukeBox/dump/The Tragically Hip - Bobcaygeon (Official Video).mp3
-Sat, 20 Jul 2019 20:14:22 googleapiclient.discovery_cache WARNING  file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/__init__.py", line 36, in autodetect
-    from google.appengine.api import memcache
-ModuleNotFoundError: No module named 'google.appengine'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 33, in <module>
-    from oauth2client.contrib.locked_file import LockedFile
-ModuleNotFoundError: No module named 'oauth2client.contrib.locked_file'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 37, in <module>
-    from oauth2client.locked_file import LockedFile
-ModuleNotFoundError: No module named 'oauth2client.locked_file'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/__init__.py", line 41, in autodetect
-    from . import file_cache
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 41, in <module>
-    'file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth')
-ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
-Sat, 20 Jul 2019 20:14:22 googleapiclient.discovery INFO     URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
-Sat, 20 Jul 2019 20:14:23 googleapiclient.discovery INFO     URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=multipart
-Sat, 20 Jul 2019 20:14:23 google_auth_httplib2 DEBUG    Making request: POST https://oauth2.googleapis.com/token
-Sat, 20 Jul 2019 20:14:30 fileUpload DEBUG    File creation successful -- ID: 1nOB5N5ezHGXgV_oMLMbpn807i7ZrQJcn
-Sat, 20 Jul 2019 20:14:30 twilio.http_client INFO     POST Request: https://api.twilio.com/2010-04-01/Accounts/AC1f8e893bc01fcfa826d318008e2cbf21/Messages.json
-Sat, 20 Jul 2019 20:14:30 twilio.http_client INFO     PAYLOAD: {'To': '+12892086138', 'From': '+12892032058', 'Body': 'File Uploaded to Drive -- The Tragically Hip - Bobcaygeon (Official Video).mp3 \n With ID -- 1nOB5N5ezHGXgV_oMLMbpn807i7ZrQJcn'}
-Sat, 20 Jul 2019 20:14:30 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.twilio.com
-Sat, 20 Jul 2019 20:14:30 urllib3.connectionpool DEBUG    https://api.twilio.com:443 "POST /2010-04-01/Accounts/AC1f8e893bc01fcfa826d318008e2cbf21/Messages.json HTTP/1.1" 201 928
-Sat, 20 Jul 2019 20:14:30 twilio.http_client INFO     POST Response: 201 {"sid": "SM5912d9ad9afb4ca8ad5530ca9a000d88", "date_created": "Sun, 21 Jul 2019 00:14:30 +0000", "date_updated": "Sun, 21 Jul 2019 00:14:30 +0000", "date_sent": null, "account_sid": "AC1f8e893bc01fcfa826d318008e2cbf21", "to": "+12892086138", "from": "+12892032058", "messaging_service_sid": null, "body": "Sent from your Twilio trial account - File Uploaded to Drive -- The Tragically Hip - Bobcaygeon (Official Video).mp3 \n With ID -- 1nOB5N5ezHGXgV_oMLMbpn807i7ZrQJcn", "status": "queued", "num_segments": "2", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": "USD", "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC1f8e893bc01fcfa826d318008e2cbf21/Messages/SM5912d9ad9afb4ca8ad5530ca9a000d88.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC1f8e893bc01fcfa826d318008e2cbf21/Messages/SM5912d9ad9afb4ca8ad5530ca9a000d88/Media.json"}}
-Sat, 20 Jul 2019 20:18:24 watch INFO     Added: ['Ring Of Fire Johnny Cash lyrics.mp3']
-Sat, 20 Jul 2019 20:18:24 watch INFO     Size of file is: 
-Sat, 20 Jul 2019 20:18:26 watch INFO     3771800 Bytes
-Sat, 20 Jul 2019 20:18:28 watch INFO     3964676 Bytes
-Sat, 20 Jul 2019 20:18:30 watch INFO     File download is complete at /home/christianboin/Programming/Python/WebTools/JukeBox/dump/Ring Of Fire Johnny Cash lyrics.mp3
-Sat, 20 Jul 2019 20:18:31 googleapiclient.discovery_cache WARNING  file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/__init__.py", line 36, in autodetect
-    from google.appengine.api import memcache
-ModuleNotFoundError: No module named 'google.appengine'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 33, in <module>
-    from oauth2client.contrib.locked_file import LockedFile
-ModuleNotFoundError: No module named 'oauth2client.contrib.locked_file'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 37, in <module>
-    from oauth2client.locked_file import LockedFile
-ModuleNotFoundError: No module named 'oauth2client.locked_file'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/__init__.py", line 41, in autodetect
-    from . import file_cache
-  File "/usr/local/lib/python3.6/dist-packages/googleapiclient/discovery_cache/file_cache.py", line 41, in <module>
-    'file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth')
-ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
-Sat, 20 Jul 2019 20:18:31 googleapiclient.discovery INFO     URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
-Sat, 20 Jul 2019 20:18:31 googleapiclient.discovery INFO     URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=multipart
-Sat, 20 Jul 2019 20:18:31 google_auth_httplib2 DEBUG    Making request: POST https://oauth2.googleapis.com/token
-Sat, 20 Jul 2019 20:18:35 fileUpload DEBUG    File creation successful -- ID: 1zMGjXP6ksQMXs9aRpXcADFgLmVqin9a-
-Sat, 20 Jul 2019 20:18:35 twilio.http_client INFO     POST Request: https://api.twilio.com/2010-04-01/Accounts/AC1f8e893bc01fcfa826d318008e2cbf21/Messages.json
-Sat, 20 Jul 2019 20:18:35 twilio.http_client INFO     PAYLOAD: {'To': '+12892086138', 'From': '+12892032058', 'Body': 'File Uploaded to Drive -- Ring Of Fire Johnny Cash lyrics.mp3 \n With ID -- 1zMGjXP6ksQMXs9aRpXcADFgLmVqin9a-'}
-Sat, 20 Jul 2019 20:18:35 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.twilio.com
-Sat, 20 Jul 2019 20:18:35 urllib3.connectionpool DEBUG    https://api.twilio.com:443 "POST /2010-04-01/Accounts/AC1f8e893bc01fcfa826d318008e2cbf21/Messages.json HTTP/1.1" 201 911
-Sat, 20 Jul 2019 20:18:35 twilio.http_client INFO     POST Response: 201 {"sid": "SMc6e279b0c40e4282bb73d0494321521d", "date_created": "Sun, 21 Jul 2019 00:18:35 +0000", "date_updated": "Sun, 21 Jul 2019 00:18:35 +0000", "date_sent": null, "account_sid": "AC1f8e893bc01fcfa826d318008e2cbf21", "to": "+12892086138", "from": "+12892032058", "messaging_service_sid": null, "body": "Sent from your Twilio trial account - File Uploaded to Drive -- Ring Of Fire Johnny Cash lyrics.mp3 \n With ID -- 1zMGjXP6ksQMXs9aRpXcADFgLmVqin9a-", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": "USD", "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC1f8e893bc01fcfa826d318008e2cbf21/Messages/SMc6e279b0c40e4282bb73d0494321521d.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC1f8e893bc01fcfa826d318008e2cbf21/Messages/SMc6e279b0c40e4282bb73d0494321521d/Media.json"}}
+Sun, 21 Jul 2019 00:23:25 __main__ INFO     watching folder /home/christianboin/Programming/Python/WebTools/JukeBox/dump
+Sun, 21 Jul 2019 00:24:31 __main__ INFO     Removed: ['Rolling Stones - Angie (HQ).mp3', 'Dolly Parton - Jolene (Audio).mp3', 'The Glorious Sons - Sawed Off Shotgun (Official Audio).mp3', 'The Tragically Hip - Bobcaygeon (Official Video).mp3', 'Ring Of Fire Johnny Cash lyrics.mp3', 'The Doors - Riders On The Storm.mp3']
+2019-07-21 - 00:29:23 watch.py  INFO     watching folder /home/christianboin/Programming/Python/WebTools/JukeBox/dump
+2019-07-21 - 00:31:14 watch.py  INFO     Added: ['Queen - Fat Bottomed Girls (Official Lyric Video).mp3']
+2019-07-21 - 00:31:14 watch.py  INFO     Size of file is: 
+2019-07-21 - 00:31:16 watch.py  INFO     5246976 Bytes
+2019-07-21 - 00:31:18 watch.py  INFO     5394318 Bytes
+2019-07-21 - 00:31:20 watch.py  INFO     File download is complete at /home/christianboin/Programming/Python/WebTools/JukeBox/dump/Queen - Fat Bottomed Girls (Official Lyric Video).mp3
+2019-07-21 - 00:31:27 fileUpload  DEBUG    File creation successful -- ID: 14eqPzb2ok8UYOlwuw-FEN44hxFOYGt_Q
+2019-07-21 - 01:33:25 watch.py  INFO     watching folder /home/christianboin/Programming/Python/WebTools/JukeBox/dump
+2019-07-21 - 01:34:07 watch.py  INFO     Removed: ['Queen - Fat Bottomed Girls (Official Lyric Video).mp3', 'Johnny Cash - Hurt (Official Video) HD_complt.mp3']
+2019-07-21 - 01:35:10 watch.py  INFO     Added: ['The Doors - Riders On The Storm.mp3']
+2019-07-21 - 01:35:10 watch.py  INFO     File was never marked _complt.  Check ytdl to see why.
+2019-07-21 - 01:36:07 watch.py  INFO     Added: ['The Doors - Riders On The Storm_complt.mp3']
+2019-07-21 - 01:36:07 watch.py  INFO     Removed: ['The Doors - Riders On The Storm.mp3']
+2019-07-21 - 01:36:07 watch.py  INFO     Size of file is: 
+2019-07-21 - 01:36:09 watch.py  INFO     File download is complete at /home/christianboin/Programming/Python/WebTools/JukeBox/dump/The Doors - Riders On The Storm_complt.mp3
+2019-07-21 - 01:36:20 fileUpload  DEBUG    File creation successful -- ID: 1MjG7lLEcdU0GJDlshP8U5_rxl6HuvLZ1
+2019-07-21 - 01:36:23 watch.py  INFO     Removed: ['The Doors - Riders On The Storm_complt.mp3']
+2019-07-21 - 01:46:54 watch.py  INFO     Added: ['Queen - Fat Bottomed Girls (Official Lyric Video).mp3']
+2019-07-21 - 01:46:54 watch.py  INFO     File was never marked _complt.  Check ytdl to see why.
+2019-07-21 - 01:47:15 watch.py  INFO     Added: ['Queen - Fat Bottomed Girls (Official Lyric Video)_complt.mp3']
+2019-07-21 - 01:47:15 watch.py  INFO     Removed: ['Queen - Fat Bottomed Girls (Official Lyric Video).mp3']
+2019-07-21 - 01:47:15 watch.py  INFO     Size of file is: 
+2019-07-21 - 01:47:17 watch.py  INFO     File download is complete at /home/christianboin/Programming/Python/WebTools/JukeBox/dump/Queen - Fat Bottomed Girls (Official Lyric Video)_complt.mp3
+2019-07-21 - 01:47:23 fileUpload  DEBUG    File creation successful -- ID: 1zDLIAfQRbg4ZxQrZkgYFa2TDa2HJ2mAk
+2019-07-21 - 01:47:27 watch.py  INFO     Removed: ['Queen - Fat Bottomed Girls (Official Lyric Video)_complt.mp3']

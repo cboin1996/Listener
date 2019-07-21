@@ -4,6 +4,7 @@ import json
 class Messager:
     pathToSelf = os.path.dirname(os.path.realpath(__file__))
     pathToSettings = os.path.join(pathToSelf, 'acct.json')
+    # loads settings from acct.json used to send a message.
     def __init__(self):
         self.twilSettings = {}
         with open(self.pathToSettings, 'r') as in_file:
