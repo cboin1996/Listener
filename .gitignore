@@ -4,3 +4,5 @@ credentials.json
 client_secrets.json
 settings.json
 acct.json
+gSettings.json
+infoWatch.log
