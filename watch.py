@@ -1,8 +1,17 @@
 import json
 import initializer
 import os, time, sys
-
-
+from Drive import fileUpload
+import logging
+from Messaging import Message
+# setup a logging.
+pathToFolder = os.path.dirname(os.path.realpath(__file__))
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s %(name)s  %(levelname)-8s %(message)s',
+                    datefmt='%a, %d %b %Y %H:%M:%S',
+                    filename=os.path.join(pathToFolder, 'infoWatch.log'),
+                    filemode='w')
+logger = logging.getLogger('watch')
 def get_size_of_file(filePath):
     if os.path.isfile(filePath):
         stat = os.stat(filePath)
@@ -13,32 +22,37 @@ def get_size_of_file(filePath):
 
 def wait_until_file_downloaded(filePath):
     currentFileSize = get_size_of_file(filePath)
-    print("Size of file is: ")
+    logger.info("Size of file is: ")
     time.sleep(2)
     while currentFileSize != get_size_of_file(filePath) or get_size_of_file(filePath) == 0:
         currentFileSize = get_size_of_file(filePath)
-        sys.stdout.write('\r%s Bytes'%(currentFileSize))
-        sys.stdout.flush()
+        logger.info('%s Bytes'%(currentFileSize))
         time.sleep(2)
-    print("\nFile download is complete at ", filePath)
+    logger.info("File download is complete at %s" % (filePath))
 
 def main(clArguments):
     settings = initializer.main()
     watchPath = settings["folderPath"]
-    print("watching folder %s" % (watchPath))
+    logger.info("watching folder %s" % (watchPath))
     before = [file for file in os.listdir(watchPath)]
     while True:
         time.sleep(int(clArguments))
         after = [file for file in os.listdir(watchPath)]
         addedFiles = [file for file in after if not file in before]
         removedFiles = [file for file in before if not file in after]
-        if addedFiles: print("Added: ", addedFiles)
-        if removedFiles: print("Removed: ", removedFiles)
+        if addedFiles: logger.info("Added: %s"% (addedFiles))
+        if removedFiles: logger.info("Removed: %s"% (removedFiles))
         before = after
+        # iterate list of added files, add to gdrive and send text to notify user
         for addedFile in addedFiles:
             pathToFile = os.path.join(watchPath,addedFile)
             wait_until_file_downloaded(filePath=pathToFile)
-            # TODO: left off here 07182019.. need to either upload file to gdrive or send email with file.
+            uploadToGDrive = fileUpload.Drive(fileName=addedFile, fullPathForFileToUpload=pathToFile)
+            uploadToGDrive.authenticate()
+            file_id = uploadToGDrive.upload()
+            messager = Message.Messager()
+            messager.createSMS("File Uploaded to Drive -- %s \n With ID -- %s" % (addedFile, file_id))
+
         #print(before)
         #print(after)
 
